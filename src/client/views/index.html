@@ -38,6 +38,18 @@
         <footer>
             <p>This is a footer</p>
         </footer>
-
+        <script>
+            //check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                //use the window load event to keep the page load performent
+                window.addEventListener('load', ()=> {
+                    navigator.serviceWorker.register('/service-worker.js').then(registration =>{
+                        console.log('Service Worker registered successfuly: ', registration);
+                    });
+                });
+            } else {
+                console.log("Service Workers not registered");
+            }
+        </script>
     </body>
 </html>

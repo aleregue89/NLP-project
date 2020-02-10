@@ -27,7 +27,6 @@ var textapi = new aylien({
 function getSummarizeFromAylien(url, res) {
     textapi.summarize({url:url}, function(error, response) {
         if (error === null) {
-            // res.setHeader('Content-Type', 'application/json');
             res.send(response);
             console.log('++++++++++++++++++++++++');
             console.log(JSON.stringify(response));

@@ -10,9 +10,6 @@ import './styles/resets.scss'
 
 const apiEndpoint = 'https://api.aylien.com/api/v1';
 
-
-
-
 /*
 console.log(checkForName);
 
@@ -22,4 +19,4 @@ console.log("CHANGE!!");*/
 export {
     checkForName,
     handleSubmit
-}
+};
